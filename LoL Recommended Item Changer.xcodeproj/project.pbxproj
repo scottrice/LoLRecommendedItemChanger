@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E63091CB14664F7700DDB99D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63091CA14664F7700DDB99D /* Cocoa.framework */; };
+		E63091D514664F7700DDB99D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E63091D314664F7700DDB99D /* InfoPlist.strings */; };
+		E63091D814664F7700DDB99D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091D714664F7700DDB99D /* main.m */; };
+		E63091DB14664F7700DDB99D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E63091D914664F7700DDB99D /* Credits.rtf */; };
+		E63091DE14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091DD14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.m */; };
+		E63091E114664F7800DDB99D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63091DF14664F7800DDB99D /* MainMenu.xib */; };
+		E63091E814664F7800DDB99D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63091CA14664F7700DDB99D /* Cocoa.framework */; };
+		E63091F014664F7800DDB99D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E63091EE14664F7800DDB99D /* InfoPlist.strings */; };
+		E63091F314664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */; };
+		E63091F514664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E63091E914664F7800DDB99D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E63091BD14664F7700DDB99D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63091C514664F7700DDB99D;
+			remoteInfo = "LoL Recommended Item Changer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoL Recommended Item Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63091CA14664F7700DDB99D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E63091CD14664F7700DDB99D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E63091CE14664F7700DDB99D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E63091CF14664F7700DDB99D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E63091D214664F7700DDB99D /* LoL Recommended Item Changer-Info.plist */ = {isa = PBXFileReference; path = "LoL Recommended Item Changer-Info.plist"; sourceTree = "<group>"; };
+		E63091D414664F7700DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E63091D614664F7700DDB99D /* LoL Recommended Item Changer-Prefix.pch */ = {isa = PBXFileReference; path = "LoL Recommended Item Changer-Prefix.pch"; sourceTree = "<group>"; };
+		E63091D714664F7700DDB99D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E63091DA14664F7700DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E63091DC14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.h */ = {isa = PBXFileReference; path = LoL_Recommended_Item_ChangerAppDelegate.h; sourceTree = "<group>"; };
+		E63091DD14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoL_Recommended_Item_ChangerAppDelegate.m; sourceTree = "<group>"; };
+		E63091E014664F7800DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoL Recommended Item ChangerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63091ED14664F7800DDB99D /* LoL Recommended Item ChangerTests-Info.plist */ = {isa = PBXFileReference; path = "LoL Recommended Item ChangerTests-Info.plist"; sourceTree = "<group>"; };
+		E63091EF14664F7800DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E63091F114664F7800DDB99D /* LoL Recommended Item ChangerTests-Prefix.pch */ = {isa = PBXFileReference; path = "LoL Recommended Item ChangerTests-Prefix.pch"; sourceTree = "<group>"; };
+		E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoL_Recommended_Item_ChangerTests.h; sourceTree = "<group>"; };
+		E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoL_Recommended_Item_ChangerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E63091C314664F7700DDB99D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091CB14664F7700DDB99D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63091E314664F7800DDB99D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091E814664F7800DDB99D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E63091BB14664F7700DDB99D = {
+			isa = PBXGroup;
+			children = (
+				E63091D014664F7700DDB99D /* LoL Recommended Item Changer */,
+				E63091EB14664F7800DDB99D /* LoL Recommended Item ChangerTests */,
+				E63091C914664F7700DDB99D /* Frameworks */,
+				E63091C714664F7700DDB99D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E63091C714664F7700DDB99D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */,
+				E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E63091C914664F7700DDB99D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E63091CA14664F7700DDB99D /* Cocoa.framework */,
+				E63091CC14664F7700DDB99D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E63091CC14664F7700DDB99D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E63091CD14664F7700DDB99D /* AppKit.framework */,
+				E63091CE14664F7700DDB99D /* CoreData.framework */,
+				E63091CF14664F7700DDB99D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E63091D014664F7700DDB99D /* LoL Recommended Item Changer */ = {
+			isa = PBXGroup;
+			children = (
+				E63091DC14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.h */,
+				E63091DD14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.m */,
+				E63091DF14664F7800DDB99D /* MainMenu.xib */,
+				E63091D114664F7700DDB99D /* Supporting Files */,
+			);
+			path = "LoL Recommended Item Changer";
+			sourceTree = "<group>";
+		};
+		E63091D114664F7700DDB99D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E63091D214664F7700DDB99D /* LoL Recommended Item Changer-Info.plist */,
+				E63091D314664F7700DDB99D /* InfoPlist.strings */,
+				E63091D614664F7700DDB99D /* LoL Recommended Item Changer-Prefix.pch */,
+				E63091D714664F7700DDB99D /* main.m */,
+				E63091D914664F7700DDB99D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E63091EB14664F7800DDB99D /* LoL Recommended Item ChangerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */,
+				E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */,
+				E63091EC14664F7800DDB99D /* Supporting Files */,
+			);
+			path = "LoL Recommended Item ChangerTests";
+			sourceTree = "<group>";
+		};
+		E63091EC14664F7800DDB99D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E63091ED14664F7800DDB99D /* LoL Recommended Item ChangerTests-Info.plist */,
+				E63091EE14664F7800DDB99D /* InfoPlist.strings */,
+				E63091F114664F7800DDB99D /* LoL Recommended Item ChangerTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E63091C514664F7700DDB99D /* LoL Recommended Item Changer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63091F814664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item Changer" */;
+			buildPhases = (
+				E63091C214664F7700DDB99D /* Sources */,
+				E63091C314664F7700DDB99D /* Frameworks */,
+				E63091C414664F7700DDB99D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoL Recommended Item Changer";
+			productName = "LoL Recommended Item Changer";
+			productReference = E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E63091E614664F7800DDB99D /* LoL Recommended Item ChangerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63091FB14664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item ChangerTests" */;
+			buildPhases = (
+				E63091E214664F7800DDB99D /* Sources */,
+				E63091E314664F7800DDB99D /* Frameworks */,
+				E63091E414664F7800DDB99D /* Resources */,
+				E63091E514664F7800DDB99D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E63091EA14664F7800DDB99D /* PBXTargetDependency */,
+			);
+			name = "LoL Recommended Item ChangerTests";
+			productName = "LoL Recommended Item ChangerTests";
+			productReference = E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E63091BD14664F7700DDB99D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E63091C014664F7700DDB99D /* Build configuration list for PBXProject "LoL Recommended Item Changer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E63091BB14664F7700DDB99D;
+			productRefGroup = E63091C714664F7700DDB99D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E63091C514664F7700DDB99D /* LoL Recommended Item Changer */,
+				E63091E614664F7800DDB99D /* LoL Recommended Item ChangerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E63091C414664F7700DDB99D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091D514664F7700DDB99D /* InfoPlist.strings in Resources */,
+				E63091DB14664F7700DDB99D /* Credits.rtf in Resources */,
+				E63091E114664F7800DDB99D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63091E414664F7800DDB99D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091F014664F7800DDB99D /* InfoPlist.strings in Resources */,
+				E63091F314664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E63091E514664F7800DDB99D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E63091C214664F7700DDB99D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091D814664F7700DDB99D /* main.m in Sources */,
+				E63091DE14664F7700DDB99D /* LoL_Recommended_Item_ChangerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63091E214664F7800DDB99D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63091F514664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E63091EA14664F7800DDB99D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E63091C514664F7700DDB99D /* LoL Recommended Item Changer */;
+			targetProxy = E63091E914664F7800DDB99D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E63091D314664F7700DDB99D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63091D414664F7700DDB99D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E63091D914664F7700DDB99D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63091DA14664F7700DDB99D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E63091DF14664F7800DDB99D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63091E014664F7800DDB99D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E63091EE14664F7800DDB99D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63091EF14664F7800DDB99D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E63091F614664F7800DDB99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E63091F714664F7800DDB99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E63091F914664F7800DDB99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoL Recommended Item Changer/LoL Recommended Item Changer-Prefix.pch";
+				INFOPLIST_FILE = "LoL Recommended Item Changer/LoL Recommended Item Changer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E63091FA14664F7800DDB99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoL Recommended Item Changer/LoL Recommended Item Changer-Prefix.pch";
+				INFOPLIST_FILE = "LoL Recommended Item Changer/LoL Recommended Item Changer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E63091FC14664F7800DDB99D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoL Recommended Item Changer.app/Contents/MacOS/LoL Recommended Item Changer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Prefix.pch";
+				INFOPLIST_FILE = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E63091FD14664F7800DDB99D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoL Recommended Item Changer.app/Contents/MacOS/LoL Recommended Item Changer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Prefix.pch";
+				INFOPLIST_FILE = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E63091C014664F7700DDB99D /* Build configuration list for PBXProject "LoL Recommended Item Changer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63091F614664F7800DDB99D /* Debug */,
+				E63091F714664F7800DDB99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E63091F814664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item Changer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63091F914664F7800DDB99D /* Debug */,
+				E63091FA14664F7800DDB99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E63091FB14664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item ChangerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63091FC14664F7800DDB99D /* Debug */,
+				E63091FD14664F7800DDB99D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E63091BD14664F7700DDB99D /* Project object */;
+}

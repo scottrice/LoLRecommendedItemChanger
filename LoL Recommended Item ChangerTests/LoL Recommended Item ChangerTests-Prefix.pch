@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'LoL Recommended Item ChangerTests' target in the 'LoL Recommended Item ChangerTests' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
