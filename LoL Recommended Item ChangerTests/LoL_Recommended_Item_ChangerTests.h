@@ -3,7 +3,7 @@
 //  LoL Recommended Item ChangerTests
 //
 //  Created by Scott on 11/6/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Midnight Drive Applications. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>

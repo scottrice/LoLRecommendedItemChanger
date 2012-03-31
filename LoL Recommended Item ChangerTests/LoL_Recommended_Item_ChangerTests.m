@@ -3,10 +3,11 @@
 //  LoL Recommended Item ChangerTests
 //
 //  Created by Scott on 11/6/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Midnight Drive Applications. All rights reserved.
 //
 
 #import "LoL_Recommended_Item_ChangerTests.h"
+#import "RICRecommendedItemManager.h"
 
 
 @implementation LoL_Recommended_Item_ChangerTests
@@ -25,9 +26,8 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testSettingRecommendedItems
 {
-    STFail(@"Unit tests are not implemented yet in LoL Recommended Item ChangerTests");
 }
 
 @end
