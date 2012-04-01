@@ -109,14 +109,23 @@ static NSString *_appPath = @"/Applications/League of Legends - Boompje Edition.
 {
     if(!_championDirectory)
     {
-        NSString *base = [_appPath stringByAppendingString:@"/Contents/Resources/transgaming/c_drive/rads/solutions/lol_game_client_sln/releases"];
-        //  Now that we have the base, we need to get the version number folder.
-        //  According to the wiki, this folder name will change with updates, but
-        //  there will still only be one folder. In that case, we will just get the
-        //  contents of the directoy, then grab the last (only) object
-        NSError *error;
-        NSString *release = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:base error:&error] lastObject];
-        _championDirectory = [NSString stringWithFormat:@"%@/%@/deploy/DATA/Characters/%@",base,release,[_champion nameCode]];
+        BOOL iLoL = YES;
+        if(!iLoL) {
+            //  This data was good for old versions of Boompje LoL. iLoL uses a completely different setup
+            NSString *base = [_appPath stringByAppendingString:@"/Contents/Resources/transgaming/c_drive/rads/solutions/lol_game_client_sln/releases"];
+            //  Now that we have the base, we need to get the version number folder.
+            //  According to the wiki, this folder name will change with updates, but
+            //  there will still only be one folder. In that case, we will just get the
+            //  contents of the directoy, then grab the last (only) object
+            NSError *error;
+            NSString *release = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:base error:&error] lastObject];
+            _championDirectory = [NSString stringWithFormat:@"%@/%@/deploy/DATA/Characters/%@",base,release,[_champion nameCode]];
+        }
+        else {
+            //  For iLoL, things are MUCH simpler
+            NSString *charactersDirectory = [_appPath stringByAppendingString:@"/Contents/Resources/League of Legends/files/DATA/Characters"];
+            _championDirectory = [charactersDirectory stringByAppendingPathComponent:[_champion nameCode]];
+        }
     }
     return _championDirectory;
 }

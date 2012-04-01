@@ -41,6 +41,10 @@
     return [NSImage imageNamed:[self nameCode]];
 }
 
+-(BOOL)isEqual:(id)object {
+    
+}
+
 #pragma mark -
 #pragma mark Private
 

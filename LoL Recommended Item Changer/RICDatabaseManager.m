@@ -104,6 +104,9 @@ static int sqlite_callback(void *object, int argc, char **argv, char **azColName
     return [self itemFromResultsDictionary:[self executeQuery:query] atIndex:0];
 }
 
+#pragma mark -
+#pragma mark Private
+
 -(NSDictionary *)executeQuery:(NSString *)query
 {
     NSMutableDictionary *_dict = nil;

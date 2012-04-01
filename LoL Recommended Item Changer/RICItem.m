@@ -46,6 +46,13 @@
     return [NSString stringWithFormat:@"%i",_code];
 }
 
+-(BOOL)isEqual:(id)object {
+    if(![object isKindOfClass:[RICItem class]])
+        return NO;
+    RICItem *other = (RICItem *)object;
+    return  [[self name] isEqual:[other name]] && [self code] == [other code];
+}
+
 #pragma mark -
 #pragma mark Private
 

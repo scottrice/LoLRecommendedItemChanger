@@ -59,7 +59,6 @@
 //  Also, even though I doubt I'll ever use it, I'll let them pass in an array of NSNumber objects as well
 +(NSString *)_codeFromObject:(id)object
 {
-    return object;
     if([object isKindOfClass:[RICItem class]])
         return [object codeString];
     if([object isKindOfClass:[NSString class]])

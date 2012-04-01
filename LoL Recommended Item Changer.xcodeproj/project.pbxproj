@@ -25,6 +25,18 @@
 		E67A00351527E5DB0014B0D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E67A00331527E5DB0014B0D3 /* Credits.rtf */; };
 		E67A00411527E6040014B0D3 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67A00401527E6040014B0D3 /* GHUnit.framework */; };
 		E67A00431527E6640014B0D3 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E67A00401527E6040014B0D3 /* GHUnit.framework */; };
+		E67A00481527E9FA0014B0D3 /* RICRecommendedItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D5F0B4146912BF005A41B0 /* RICRecommendedItemManager.m */; };
+		E67A00491527E9FA0014B0D3 /* RICINIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BCD149731A30046B9ED /* RICINIManager.m */; };
+		E67A004A1527E9FA0014B0D3 /* RICChampion.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BD314974BED0046B9ED /* RICChampion.m */; };
+		E67A004B1527E9FA0014B0D3 /* RICItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BD6149750F00046B9ED /* RICItem.m */; };
+		E67A004C1527E9FA0014B0D3 /* RICDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BDB149774880046B9ED /* RICDatabaseManager.m */; };
+		E67A00511527EA4A0014B0D3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E65A3BD8149773CB0046B9ED /* libsqlite3.dylib */; };
+		E67A00521527EE2D0014B0D3 /* LoLData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E69B17DC14A43E3600273449 /* LoLData.sqlite */; };
+		E67A00611527EE560014B0D3 /* RICDatabaseManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A005A1527EE560014B0D3 /* RICDatabaseManagerTest.m */; };
+		E67A00651527EE8C0014B0D3 /* RICChampionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A00641527EE8C0014B0D3 /* RICChampionTest.m */; };
+		E67A00681527EEB00014B0D3 /* RICItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A00671527EEB00014B0D3 /* RICItemTest.m */; };
+		E67A006B1527EED10014B0D3 /* RICINIManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A006A1527EED10014B0D3 /* RICINIManagerTest.m */; };
+		E67A006E1527EEED0014B0D3 /* RICRecommendedItemManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A006D1527EEED0014B0D3 /* RICRecommendedItemManagerTest.m */; };
 		E67E7FC01527B15F00D7A616 /* UnknownItem.png in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FBF1527B15F00D7A616 /* UnknownItem.png */; };
 		E67E80581527CD5300D7A616 /* Abyssal_Scepter.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FCF1527CD5300D7A616 /* Abyssal_Scepter.gif */; };
 		E67E80591527CD5300D7A616 /* Aegis_of_the_Legion.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD01527CD5300D7A616 /* Aegis_of_the_Legion.gif */; };
@@ -309,6 +321,11 @@
 		E67A00311527E5DB0014B0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E67A00341527E5DB0014B0D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		E67A00401527E6040014B0D3 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnit.framework; sourceTree = "<group>"; };
+		E67A005A1527EE560014B0D3 /* RICDatabaseManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICDatabaseManagerTest.m; sourceTree = "<group>"; };
+		E67A00641527EE8C0014B0D3 /* RICChampionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICChampionTest.m; sourceTree = "<group>"; };
+		E67A00671527EEB00014B0D3 /* RICItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICItemTest.m; sourceTree = "<group>"; };
+		E67A006A1527EED10014B0D3 /* RICINIManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICINIManagerTest.m; sourceTree = "<group>"; };
+		E67A006D1527EEED0014B0D3 /* RICRecommendedItemManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICRecommendedItemManagerTest.m; sourceTree = "<group>"; };
 		E67E7FBF1527B15F00D7A616 /* UnknownItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownItem.png; sourceTree = "<group>"; };
 		E67E7FCF1527CD5300D7A616 /* Abyssal_Scepter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Abyssal_Scepter.gif; sourceTree = "<group>"; };
 		E67E7FD01527CD5300D7A616 /* Aegis_of_the_Legion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Aegis_of_the_Legion.gif; sourceTree = "<group>"; };
@@ -565,6 +582,7 @@
 			files = (
 				E67A00291527E5DB0014B0D3 /* Cocoa.framework in Frameworks */,
 				E67A00411527E6040014B0D3 /* GHUnit.framework in Frameworks */,
+				E67A00511527EA4A0014B0D3 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +700,7 @@
 		E67A002A1527E5DB0014B0D3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E67A00441527E7EE0014B0D3 /* Test Classes */,
 				E67A002B1527E5DB0014B0D3 /* Supporting Files */,
 			);
 			path = Tests;
@@ -698,6 +717,18 @@
 				E67A00331527E5DB0014B0D3 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E67A00441527E7EE0014B0D3 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E67A005A1527EE560014B0D3 /* RICDatabaseManagerTest.m */,
+				E67A00641527EE8C0014B0D3 /* RICChampionTest.m */,
+				E67A00671527EEB00014B0D3 /* RICItemTest.m */,
+				E67A006A1527EED10014B0D3 /* RICINIManagerTest.m */,
+				E67A006D1527EEED0014B0D3 /* RICRecommendedItemManagerTest.m */,
+			);
+			name = "Test Classes";
 			sourceTree = "<group>";
 		};
 		E67E7FCE1527CD5300D7A616 /* ItemIcons */ = {
@@ -1262,6 +1293,7 @@
 			files = (
 				E67A002F1527E5DB0014B0D3 /* InfoPlist.strings in Resources */,
 				E67A00351527E5DB0014B0D3 /* Credits.rtf in Resources */,
+				E67A00521527EE2D0014B0D3 /* LoLData.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,6 +1325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67A00321527E5DB0014B0D3 /* main.m in Sources */,
+				E67A00481527E9FA0014B0D3 /* RICRecommendedItemManager.m in Sources */,
+				E67A00491527E9FA0014B0D3 /* RICINIManager.m in Sources */,
+				E67A004A1527E9FA0014B0D3 /* RICChampion.m in Sources */,
+				E67A004B1527E9FA0014B0D3 /* RICItem.m in Sources */,
+				E67A004C1527E9FA0014B0D3 /* RICDatabaseManager.m in Sources */,
+				E67A00611527EE560014B0D3 /* RICDatabaseManagerTest.m in Sources */,
+				E67A00651527EE8C0014B0D3 /* RICChampionTest.m in Sources */,
+				E67A00681527EEB00014B0D3 /* RICItemTest.m in Sources */,
+				E67A006B1527EED10014B0D3 /* RICINIManagerTest.m in Sources */,
+				E67A006E1527EEED0014B0D3 /* RICRecommendedItemManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

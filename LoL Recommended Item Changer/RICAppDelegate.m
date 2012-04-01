@@ -14,8 +14,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    //  Test that the database is working
-    NSLog(@"%@",[[[RICDatabaseManager defaultManager] itemWithCode:3001] name]);
     _currentSelection = [[RICCurrentSelectionViewController alloc] initWithNibName:nil bundle:nil];
     _selection = [[RICSelectionViewController alloc] initWithNibName:nil bundle:nil];
     [_selection setCurrentSelectionController:_currentSelection];
