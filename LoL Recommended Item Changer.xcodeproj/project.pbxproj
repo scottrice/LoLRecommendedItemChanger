@@ -12,10 +12,6 @@
 		E63091D814664F7700DDB99D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091D714664F7700DDB99D /* main.m */; };
 		E63091DE14664F7700DDB99D /* RICAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091DD14664F7700DDB99D /* RICAppDelegate.m */; };
 		E63091E114664F7800DDB99D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63091DF14664F7800DDB99D /* MainMenu.xib */; };
-		E63091E814664F7800DDB99D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63091CA14664F7700DDB99D /* Cocoa.framework */; };
-		E63091F014664F7800DDB99D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E63091EE14664F7800DDB99D /* InfoPlist.strings */; };
-		E63091F314664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */; };
-		E63091F514664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */; };
 		E63F791314A25A4900FE1E4D /* RICCurrentSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E63F791114A25A4900FE1E4D /* RICCurrentSelectionViewController.m */; };
 		E63F791414A25A4900FE1E4D /* RICCurrentSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E63F791214A25A4900FE1E4D /* RICCurrentSelectionView.xib */; };
 		E65A3BCE149731A30046B9ED /* RICINIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BCD149731A30046B9ED /* RICINIManager.m */; };
@@ -23,6 +19,12 @@
 		E65A3BD7149750F00046B9ED /* RICItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BD6149750F00046B9ED /* RICItem.m */; };
 		E65A3BD9149773CB0046B9ED /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E65A3BD8149773CB0046B9ED /* libsqlite3.dylib */; };
 		E65A3BDC149774890046B9ED /* RICDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E65A3BDB149774880046B9ED /* RICDatabaseManager.m */; };
+		E67A00291527E5DB0014B0D3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E63091CA14664F7700DDB99D /* Cocoa.framework */; };
+		E67A002F1527E5DB0014B0D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E67A002D1527E5DB0014B0D3 /* InfoPlist.strings */; };
+		E67A00321527E5DB0014B0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E67A00311527E5DB0014B0D3 /* main.m */; };
+		E67A00351527E5DB0014B0D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E67A00331527E5DB0014B0D3 /* Credits.rtf */; };
+		E67A00411527E6040014B0D3 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67A00401527E6040014B0D3 /* GHUnit.framework */; };
+		E67A00431527E6640014B0D3 /* GHUnit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E67A00401527E6040014B0D3 /* GHUnit.framework */; };
 		E67E7FC01527B15F00D7A616 /* UnknownItem.png in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FBF1527B15F00D7A616 /* UnknownItem.png */; };
 		E67E80581527CD5300D7A616 /* Abyssal_Scepter.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FCF1527CD5300D7A616 /* Abyssal_Scepter.gif */; };
 		E67E80591527CD5300D7A616 /* Aegis_of_the_Legion.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD01527CD5300D7A616 /* Aegis_of_the_Legion.gif */; };
@@ -261,15 +263,18 @@
 		E6D5F0B6146912BF005A41B0 /* RICRecommendedItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D5F0B4146912BF005A41B0 /* RICRecommendedItemManager.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E63091E914664F7800DDB99D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E63091BD14664F7700DDB99D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E63091C514664F7700DDB99D;
-			remoteInfo = "LoL Recommended Item Changer";
+/* Begin PBXCopyFilesBuildPhase section */
+		E67A00421527E6510014B0D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E67A00431527E6640014B0D3 /* GHUnit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoL Recommended Item Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,12 +289,6 @@
 		E63091DC14664F7700DDB99D /* RICAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj; path = RICAppDelegate.h; sourceTree = "<group>"; };
 		E63091DD14664F7700DDB99D /* RICAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RICAppDelegate.m; sourceTree = "<group>"; };
 		E63091E014664F7800DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoL Recommended Item ChangerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E63091ED14664F7800DDB99D /* LoL Recommended Item ChangerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LoL Recommended Item ChangerTests-Info.plist"; sourceTree = "<group>"; };
-		E63091EF14664F7800DDB99D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E63091F114664F7800DDB99D /* LoL Recommended Item ChangerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoL Recommended Item ChangerTests-Prefix.pch"; sourceTree = "<group>"; };
-		E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoL_Recommended_Item_ChangerTests.h; sourceTree = "<group>"; };
-		E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoL_Recommended_Item_ChangerTests.m; sourceTree = "<group>"; };
 		E63535E11526945000DA867B /* RICConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICConstants.h; sourceTree = "<group>"; };
 		E63F791014A25A4900FE1E4D /* RICCurrentSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICCurrentSelectionViewController.h; sourceTree = "<group>"; };
 		E63F791114A25A4900FE1E4D /* RICCurrentSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICCurrentSelectionViewController.m; sourceTree = "<group>"; };
@@ -303,6 +302,13 @@
 		E65A3BD8149773CB0046B9ED /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E65A3BDA149774880046B9ED /* RICDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICDatabaseManager.h; sourceTree = "<group>"; };
 		E65A3BDB149774880046B9ED /* RICDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICDatabaseManager.m; sourceTree = "<group>"; };
+		E67A00271527E5DA0014B0D3 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67A002C1527E5DB0014B0D3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		E67A002E1527E5DB0014B0D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E67A00301527E5DB0014B0D3 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		E67A00311527E5DB0014B0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E67A00341527E5DB0014B0D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E67A00401527E6040014B0D3 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnit.framework; sourceTree = "<group>"; };
 		E67E7FBF1527B15F00D7A616 /* UnknownItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnknownItem.png; sourceTree = "<group>"; };
 		E67E7FCF1527CD5300D7A616 /* Abyssal_Scepter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Abyssal_Scepter.gif; sourceTree = "<group>"; };
 		E67E7FD01527CD5300D7A616 /* Aegis_of_the_Legion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Aegis_of_the_Legion.gif; sourceTree = "<group>"; };
@@ -553,11 +559,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63091E314664F7800DDB99D /* Frameworks */ = {
+		E67A00241527E5DA0014B0D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63091E814664F7800DDB99D /* Cocoa.framework in Frameworks */,
+				E67A00291527E5DB0014B0D3 /* Cocoa.framework in Frameworks */,
+				E67A00411527E6040014B0D3 /* GHUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				E63091D014664F7700DDB99D /* LoL Recommended Item Changer */,
-				E63091EB14664F7800DDB99D /* LoL Recommended Item ChangerTests */,
+				E67A002A1527E5DB0014B0D3 /* Tests */,
 				E63091C914664F7700DDB99D /* Frameworks */,
 				E63091C714664F7700DDB99D /* Products */,
 			);
@@ -578,7 +585,7 @@
 			isa = PBXGroup;
 			children = (
 				E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */,
-				E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */,
+				E67A00271527E5DA0014B0D3 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -622,26 +629,6 @@
 				E63091D314664F7700DDB99D /* InfoPlist.strings */,
 				E63091D614664F7700DDB99D /* LoL Recommended Item Changer-Prefix.pch */,
 				E63091D714664F7700DDB99D /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E63091EB14664F7800DDB99D /* LoL Recommended Item ChangerTests */ = {
-			isa = PBXGroup;
-			children = (
-				E63091EC14664F7800DDB99D /* Supporting Files */,
-				E63091F214664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h */,
-				E63091F414664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m */,
-			);
-			path = "LoL Recommended Item ChangerTests";
-			sourceTree = "<group>";
-		};
-		E63091EC14664F7800DDB99D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E63091ED14664F7800DDB99D /* LoL Recommended Item ChangerTests-Info.plist */,
-				E63091EE14664F7800DDB99D /* InfoPlist.strings */,
-				E63091F114664F7800DDB99D /* LoL Recommended Item ChangerTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -690,6 +677,27 @@
 				E6B70B8A14A50C5F004D93FC /* RICCollectionViewItem.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E67A002A1527E5DB0014B0D3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E67A002B1527E5DB0014B0D3 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E67A002B1527E5DB0014B0D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E67A00401527E6040014B0D3 /* GHUnit.framework */,
+				E67A002C1527E5DB0014B0D3 /* Tests-Info.plist */,
+				E67A002D1527E5DB0014B0D3 /* InfoPlist.strings */,
+				E67A00301527E5DB0014B0D3 /* Tests-Prefix.pch */,
+				E67A00311527E5DB0014B0D3 /* main.m */,
+				E67A00331527E5DB0014B0D3 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E67E7FCE1527CD5300D7A616 /* ItemIcons */ = {
@@ -963,24 +971,23 @@
 			productReference = E63091C614664F7700DDB99D /* LoL Recommended Item Changer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E63091E614664F7800DDB99D /* LoL Recommended Item ChangerTests */ = {
+		E67A00261527E5DA0014B0D3 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E63091FB14664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item ChangerTests" */;
+			buildConfigurationList = E67A003E1527E5DB0014B0D3 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				E63091E214664F7800DDB99D /* Sources */,
-				E63091E314664F7800DDB99D /* Frameworks */,
-				E63091E414664F7800DDB99D /* Resources */,
-				E63091E514664F7800DDB99D /* ShellScript */,
+				E67A00231527E5DA0014B0D3 /* Sources */,
+				E67A00241527E5DA0014B0D3 /* Frameworks */,
+				E67A00251527E5DA0014B0D3 /* Resources */,
+				E67A00421527E6510014B0D3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E63091EA14664F7800DDB99D /* PBXTargetDependency */,
 			);
-			name = "LoL Recommended Item ChangerTests";
-			productName = "LoL Recommended Item ChangerTests";
-			productReference = E63091E714664F7800DDB99D /* LoL Recommended Item ChangerTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			name = Tests;
+			productName = Tests;
+			productReference = E67A00271527E5DA0014B0D3 /* Tests.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -1003,7 +1010,7 @@
 			projectRoot = "";
 			targets = (
 				E63091C514664F7700DDB99D /* LoL Recommended Item Changer */,
-				E63091E614664F7800DDB99D /* LoL Recommended Item ChangerTests */,
+				E67A00261527E5DA0014B0D3 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1249,32 +1256,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63091E414664F7800DDB99D /* Resources */ = {
+		E67A00251527E5DA0014B0D3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63091F014664F7800DDB99D /* InfoPlist.strings in Resources */,
-				E63091F314664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.h in Resources */,
+				E67A002F1527E5DB0014B0D3 /* InfoPlist.strings in Resources */,
+				E67A00351527E5DB0014B0D3 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E63091E514664F7800DDB99D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E63091C214664F7700DDB99D /* Sources */ = {
@@ -1297,23 +1288,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63091E214664F7800DDB99D /* Sources */ = {
+		E67A00231527E5DA0014B0D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63091F514664F7800DDB99D /* LoL_Recommended_Item_ChangerTests.m in Sources */,
+				E67A00321527E5DB0014B0D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E63091EA14664F7800DDB99D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E63091C514664F7700DDB99D /* LoL Recommended Item Changer */;
-			targetProxy = E63091E914664F7800DDB99D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E63091D314664F7700DDB99D /* InfoPlist.strings */ = {
@@ -1332,12 +1315,20 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		E63091EE14664F7800DDB99D /* InfoPlist.strings */ = {
+		E67A002D1527E5DB0014B0D3 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E63091EF14664F7800DDB99D /* en */,
+				E67A002E1527E5DB0014B0D3 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E67A00331527E5DB0014B0D3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E67A00341527E5DB0014B0D3 /* en */,
+			);
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1405,47 +1396,43 @@
 			};
 			name = Release;
 		};
-		E63091FC14664F7800DDB99D /* Debug */ = {
+		E67A003C1527E5DB0014B0D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoL Recommended Item Changer.app/Contents/MacOS/LoL Recommended Item Changer";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Tests\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Prefix.pch";
-				INFOPLIST_FILE = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		E63091FD14664F7800DDB99D /* Release */ = {
+		E67A003D1527E5DB0014B0D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LoL Recommended Item Changer.app/Contents/MacOS/LoL Recommended Item Changer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Tests\"",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Prefix.pch";
-				INFOPLIST_FILE = "LoL Recommended Item ChangerTests/LoL Recommended Item ChangerTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -1470,14 +1457,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E63091FB14664F7800DDB99D /* Build configuration list for PBXNativeTarget "LoL Recommended Item ChangerTests" */ = {
+		E67A003E1527E5DB0014B0D3 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E63091FC14664F7800DDB99D /* Debug */,
-				E63091FD14664F7800DDB99D /* Release */,
+				E67A003C1527E5DB0014B0D3 /* Debug */,
+				E67A003D1527E5DB0014B0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
