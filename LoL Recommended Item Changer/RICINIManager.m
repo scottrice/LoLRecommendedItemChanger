@@ -8,7 +8,7 @@
 
 #import "RICINIManager.h"
 
-#define lazyConvert(index) [RICINIManager _codeFromObject:[items objectAtIndex:index]]
+#define codeStringFromUnknownType(index) [RICINIManager _codeFromObject:[items objectAtIndex:index]]
 
 @interface RICINIManager (Private)
 
@@ -23,12 +23,12 @@
     if([items count] != 6)
         return nil;
     return [NSString stringWithFormat:@"[ItemSet1]\nSetName=Set1\nRecItem1=%@\nRecItem2=%@\nRecItem3=%@\nRecItem4=%@\nRecItem5=%@\nRecItem6=%@",
-            lazyConvert(0),
-            lazyConvert(1),
-            lazyConvert(2),
-            lazyConvert(3),
-            lazyConvert(4),
-            lazyConvert(5)];
+            codeStringFromUnknownType(0),
+            codeStringFromUnknownType(1),
+            codeStringFromUnknownType(2),
+            codeStringFromUnknownType(3),
+            codeStringFromUnknownType(4),
+            codeStringFromUnknownType(5)];
 }
 
 +(NSArray *)readItemsFromINIString:(NSString *)string

@@ -21,6 +21,8 @@
 
 +(RICChampion *)findChampionWithNameCode:(NSString *)nameCode;
 
+-(NSImage *)icon;
+
 //  For the most part, you should never have to edit these
 //  Champions should be returned from the database already
 //  initialized with the correct data

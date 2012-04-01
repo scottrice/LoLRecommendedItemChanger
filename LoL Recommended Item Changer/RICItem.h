@@ -18,6 +18,8 @@
 
 +(RICItem *)findItemWithCode:(NSInteger)code;
 
+-(NSString *)itemImageName;
+-(NSImage *)icon;
 -(NSString *)codeString;
 
 @property(nonatomic,copy)NSString *name;

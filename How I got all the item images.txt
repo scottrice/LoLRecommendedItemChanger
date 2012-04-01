@@ -1,0 +1,8 @@
+Javascript Code to get a list of all thumbnail urls from items page:
+
+$("table.navbox img").each(function(index,element){console.log('"'+element.src.replace("/thumb/","/")+'",');})
+
+Regular Expression to get rid of the thumbnail extension on all the items:
+
+/20px-[A-Za-z0-9.%_]*",
+

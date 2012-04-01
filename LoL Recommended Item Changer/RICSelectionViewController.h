@@ -8,13 +8,31 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RICDatabaseManager.h"
+#import "RICCurrentSelectionViewController.h"
 
-@interface RICSelectionViewController : NSViewController {
+@protocol RICSelectionDelegate
+
+-(void)selectChampion:(RICChampion *)champion;
+-(void)selectItem:(RICItem *)item;
+
+@end
+
+@interface RICSelectionViewController : NSViewController <RICSelectionDelegate>{
 @private
-    IBOutlet NSCollectionView *_collection;
+    IBOutlet NSScrollView *_championScrollView;
+    IBOutlet NSScrollView *_itemScrollView;
+    IBOutlet NSCollectionView *_championCollection;
+    IBOutlet NSCollectionView *_itemCollection;
+    
+    RICCurrentSelectionViewController *_currentSelection;
 }
 
--(void)setChampion:(RICChampion *)champion;
--(void)setNextItem:(RICItem *)item;
+-(void)selectChampion:(RICChampion *)champion;
+-(void)selectItem:(RICItem *)item;
+
+-(void)showChampions;
+-(void)showItems;
+
+@property(nonatomic,retain)RICCurrentSelectionViewController *currentSelectionController;
 
 @end

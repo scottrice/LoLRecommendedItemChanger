@@ -32,14 +32,13 @@
 
 -(NSString *)itemImageName
 {
-    return [[[self name] 
-            stringByReplacingOccurrencesOfString:@"_" withString:@""]
-            stringByReplacingOccurrencesOfString:@"'" withString:@""];
+    return [[self name] 
+            stringByReplacingOccurrencesOfString:@" " withString:@"_"];
 }
 
 -(NSImage *)icon
 {
-    return [NSImage imageNamed:[NSString stringWithFormat:@"item_%@.png"]];
+    return [NSImage imageNamed:[self itemImageName]];
 }
 
 -(NSString *)codeString

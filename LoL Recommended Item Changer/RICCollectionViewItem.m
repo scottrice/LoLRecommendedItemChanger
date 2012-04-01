@@ -13,15 +13,6 @@
 
 @synthesize iconView=_iconView,label=_label, delegate=_delegate;
 
--(id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if(self)
-    {
-    }
-    return self;
-}
-
 - (id)init
 {
     self = [super init];
@@ -48,17 +39,39 @@
     [[self iconView] setImage:[representedObject icon]];
 }
 
--(void)mouseDown:(NSEvent *)theEvent
-{
-    if([[[self representedObject] class] isKindOfClass:[RICChampion class]])
-        [_delegate setChampion:[self representedObject]];
-    if([[[self representedObject] class] isKindOfClass:[RICItem class]])
-        [_delegate setNextItem:[self representedObject]];
+-(void)setSelected:(BOOL)flag {
+    [super setSelected:flag];
+    if(flag) {
+        //  Determine whether the use selected a champion or an item, and
+        //  inform the delegate accordingly
+        if([[self representedObject] isKindOfClass:[RICChampion class]])
+            [[self delegate] selectChampion:(RICChampion *)[self representedObject]];
+        if([[self representedObject] isKindOfClass:[RICItem class]])
+            [[self delegate] selectItem:(RICItem *)[self representedObject]];
+    }
 }
 
 - (void)dealloc
 {
     [super dealloc];
+}
+
+-(id)copyWithZone:(NSZone *) zone {
+    RICCollectionViewItem *newItem = [super copyWithZone:zone];//[[RICCollectionViewItem allocWithZone:zone] init];
+    [newItem setDelegate:[self delegate]];
+    return newItem;
+}
+
+//  NSCoding compliance
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
 }
 
 @end

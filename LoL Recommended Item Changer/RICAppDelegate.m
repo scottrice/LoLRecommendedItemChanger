@@ -18,6 +18,8 @@
     NSLog(@"%@",[[[RICDatabaseManager defaultManager] itemWithCode:3001] name]);
     _currentSelection = [[RICCurrentSelectionViewController alloc] initWithNibName:nil bundle:nil];
     _selection = [[RICSelectionViewController alloc] initWithNibName:nil bundle:nil];
+    [_selection setCurrentSelectionController:_currentSelection];
+    [_currentSelection setSelectionViewController:_selection];
     
     CGRect wf = [[_window contentView] frame];
     CGRect csf = [[_currentSelection view] frame];

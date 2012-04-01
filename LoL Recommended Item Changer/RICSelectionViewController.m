@@ -16,6 +16,8 @@
 
 @implementation RICSelectionViewController
 
+@synthesize currentSelectionController=_currentSelection;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:@"RICSelectionView" bundle:nibBundleOrNil];
@@ -26,14 +28,23 @@
     return self;
 }
 
--(void)setChampion:(RICChampion *)champion
-{
-    
+-(void)selectChampion:(RICChampion *)champion {
+    [_currentSelection setChampion:champion];
+    [self showItems];
 }
 
--(void)setNextItem:(RICItem *)item
-{
-    
+-(void)selectItem:(RICItem *)item {
+    [_currentSelection setNextItem:item];
+}
+
+-(void)showChampions {
+    [_championScrollView setHidden:NO];
+    [_itemScrollView setHidden:YES];
+}
+
+-(void)showItems {
+    [_championScrollView setHidden:YES];
+    [_itemScrollView setHidden:NO];
 }
 
 #pragma mark -
@@ -41,7 +52,10 @@
 
 -(void)viewDidFinishInitialization
 {
-    [_collection setContent:[[RICDatabaseManager defaultManager] allChampions]];
+    [_championCollection setSelectable:YES];
+    [_championCollection setContent:[[RICDatabaseManager defaultManager] allChampions]];
+    [_itemCollection setSelectable:YES];
+    [_itemCollection setContent:[[RICDatabaseManager defaultManager] allItems]];
 }
 
 -(void)loadView

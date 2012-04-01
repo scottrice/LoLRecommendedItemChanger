@@ -7,18 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RICSelectionViewController.h"
 #import "RICChampion.h"
 #import "RICItem.h"
 
 
 @interface RICCollectionViewItem : NSCollectionViewItem {
 @private
-    IBOutlet id _delegate;
+    IBOutlet id<RICSelectionDelegate> _delegate;
     IBOutlet NSTextField *_label;
     IBOutlet NSImageView *_iconView;
 }
 
-@property(nonatomic,assign)id delegate;
+@property(nonatomic,assign)id<RICSelectionDelegate> delegate;
 @property(nonatomic,readonly)NSTextField *label;
 @property(nonatomic,readonly)NSImageView *iconView;
 
