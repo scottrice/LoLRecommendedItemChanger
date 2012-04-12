@@ -7,7 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RICConstants.h"
 #import "RICDatabaseManager.h"
+#import "RICSelectionItemView.h"
 #import "RICCurrentSelectionViewController.h"
 
 @protocol RICSelectionDelegate
@@ -17,7 +19,7 @@
 
 @end
 
-@interface RICSelectionViewController : NSViewController <RICSelectionDelegate>{
+@interface RICSelectionViewController : NSViewController <RICSelectionDelegate,NSCollectionViewDelegate>{
 @private
     IBOutlet NSScrollView *_championScrollView;
     IBOutlet NSScrollView *_itemScrollView;

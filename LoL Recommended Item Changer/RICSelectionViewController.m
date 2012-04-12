@@ -48,6 +48,27 @@
 }
 
 #pragma mark -
+#pragma mark Dragging and Dropping
+
+-(BOOL)collectionView:(NSCollectionView *)collectionView canDragItemsAtIndexes:(NSIndexSet *)indexes withEvent:(NSEvent*)event {
+    [(RICSelectionItemView *)[[collectionView itemAtIndex:[indexes lastIndex]] view] setIsDrag];
+    return YES;
+}
+
+- (BOOL)collectionView:(NSCollectionView *)collectionView writeItemsAtIndexes:(NSIndexSet *)indexes toPasteboard:(NSPasteboard *)pasteboard {
+    RICItem *item = [[collectionView content] objectAtIndex:[indexes lastIndex]];
+    [pasteboard clearContents];
+    [pasteboard declareTypes:[NSArray arrayWithObject:RICITEMDRAGTYPE] owner:self];
+    [pasteboard setString:[item codeString] forType:RICITEMDRAGTYPE];
+    return YES;
+}
+
+- (NSImage *)collectionView:(NSCollectionView *)collectionView draggingImageForItemsAtIndexes:(NSIndexSet *)indexes withEvent:(NSEvent *)event offset:(NSPointPointer)dragImageOffset {
+    RICItem *item = [[collectionView content] objectAtIndex:[indexes lastIndex]];
+    return [item icon];
+}
+
+#pragma mark -
 #pragma mark Private
 
 -(void)viewDidFinishInitialization
@@ -56,6 +77,8 @@
     [_championCollection setContent:[[RICDatabaseManager defaultManager] allChampions]];
     [_itemCollection setSelectable:YES];
     [_itemCollection setContent:[[RICDatabaseManager defaultManager] allItems]];
+    [_itemCollection setDelegate:self];
+    [self selectChampion:[RICChampion findChampionWithNameCode:@"Ashe"]];
 }
 
 -(void)loadView

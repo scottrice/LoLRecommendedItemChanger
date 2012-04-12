@@ -9,9 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "RICConstants.h"
 
-#import "RICSelectedItemView.h"
-#import "RICChampion.h"
 #import "RICItem.h"
+#import "RICChampion.h"
+
+#import "RICCurrentlySelectedItemView.h"
 
 @class RICSelectionViewController;
 
@@ -30,7 +31,7 @@
     RICSelectionViewController *_selectionController;
     
     //  Used in the nib
-    IBOutlet RICSelectedItemView *_loadedCurrentItemView;
+    IBOutlet RICCurrentlySelectedItemView *_loadedCurrentItemView;
 }
 
 

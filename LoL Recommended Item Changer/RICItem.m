@@ -32,8 +32,9 @@
 
 -(NSString *)itemImageName
 {
-    return [[self name] 
-            stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    return [[[self name] 
+            stringByReplacingOccurrencesOfString:@" " withString:@"_"]
+            stringByReplacingOccurrencesOfString:@"." withString:@""];
 }
 
 -(NSImage *)icon

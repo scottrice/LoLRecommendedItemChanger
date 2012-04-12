@@ -9,3 +9,4 @@
 #import <Cocoa/Cocoa.h>
 
 #define NUMBER_OF_ITEMS 6
+#define RICITEMDRAGTYPE @"RICItemDragType"

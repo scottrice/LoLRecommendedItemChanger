@@ -8,7 +8,7 @@
 
 #import "RICCurrentSelectionViewController.h"
 
-#define X_MARGIN 10
+#define X_MARGIN 0
 #define Y_VALUE_OF_FIRST_ITEM_VIEW 550
 
 @implementation RICCurrentSelectionViewController
@@ -19,8 +19,8 @@
 {
     self = [super initWithNibName:@"RICCurrentSelectionView" bundle:nibBundleOrNil];
     if (self) {
-        _items = [NSMutableArray arrayWithCapacity:NUMBER_OF_ITEMS];
-        _itemViews = [NSMutableArray arrayWithCapacity:NUMBER_OF_ITEMS];
+        _items = [[NSMutableArray arrayWithCapacity:NUMBER_OF_ITEMS] retain];
+        _itemViews = [[NSMutableArray arrayWithCapacity:NUMBER_OF_ITEMS] retain];
         NSUInteger currentY = Y_VALUE_OF_FIRST_ITEM_VIEW;
         //  Create all the item views
         for(NSInteger i = 0 ; i < NUMBER_OF_ITEMS ; i++) {
@@ -28,14 +28,19 @@
             //  Anyway, load the nib and have the new view set as the _loadedCurrentItemView object
             [NSBundle loadNibNamed:@"RICSelectedItemView" owner:self];
             [_loadedCurrentItemView setFrameOrigin:CGPointMake(X_MARGIN, currentY)];
+            [_loadedCurrentItemView setTarget:self];
+            [_loadedCurrentItemView setAction:@selector(setItemViewAsCurrent:)];
             [[self view] addSubview:_loadedCurrentItemView];
             [_itemViews addObject:_loadedCurrentItemView];
             //  Set currentY to the correct value for the next iteration
             currentY -= [_loadedCurrentItemView frame].size.height;
         }
+        for(NSInteger i = 0 ; i < NUMBER_OF_ITEMS ; i++) {
+            [_items addObject:[NSNull null]];
+        }
         [_championIconView setTarget:self];
         [_championIconView setAction:@selector(championPortraitClicked:)];
-        
+        [[_itemViews objectAtIndex:0] setIsCurrentItem:YES];
     }
     
     return self;
@@ -46,17 +51,28 @@
     [_championLabel setStringValue:[champion name]];
 }
 
+-(void)setItemViewAsCurrent:(RICCurrentlySelectedItemView *)itemView {
+    NSUInteger index = [_itemViews indexOfObject:itemView];
+    if(index != NSNotFound) {
+        [[_itemViews objectAtIndex:_currentItemIndex] setIsCurrentItem:NO];
+        _currentItemIndex = index;
+        [itemView setIsCurrentItem:YES];
+    }
+}
+
 -(void)setNextItem:(RICItem *)item {
+    [[_itemViews objectAtIndex:_currentItemIndex] setIsCurrentItem:NO];
     [self setItem:item atIndex:_currentItemIndex];
     //  Go to the next item
     _currentItemIndex++;
     //  Loop it around (if we are on the last item
     _currentItemIndex %= NUMBER_OF_ITEMS;
+    [[_itemViews objectAtIndex:_currentItemIndex] setIsCurrentItem:YES];
 }
 
 -(void)setItem:(RICItem *)item atIndex:(NSUInteger)index {
-//    [_items replaceObjectAtIndex:index withObject:item];
-//    [[_itemViews objectAtIndex:index] setItem:item];
+    [_items replaceObjectAtIndex:index withObject:item];
+    [[_itemViews objectAtIndex:index] setItem:item];
 }
 
 -(IBAction)championPortraitClicked:(id)sender {

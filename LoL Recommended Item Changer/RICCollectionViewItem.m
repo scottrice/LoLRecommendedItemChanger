@@ -8,6 +8,9 @@
 
 #import "RICCollectionViewItem.h"
 
+void nop() {
+    
+}
 
 @implementation RICCollectionViewItem
 
@@ -39,26 +42,18 @@
     [[self iconView] setImage:[representedObject icon]];
 }
 
--(void)setSelected:(BOOL)flag {
-    [super setSelected:flag];
-    if(flag) {
-        //  Determine whether the use selected a champion or an item, and
-        //  inform the delegate accordingly
-        if([[self representedObject] isKindOfClass:[RICChampion class]])
-            [[self delegate] selectChampion:(RICChampion *)[self representedObject]];
-        if([[self representedObject] isKindOfClass:[RICItem class]])
-            [[self delegate] selectItem:(RICItem *)[self representedObject]];
-    }
-}
-
 - (void)dealloc
 {
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Copying (for use in the NSCollectionView)
+
 -(id)copyWithZone:(NSZone *) zone {
-    RICCollectionViewItem *newItem = [super copyWithZone:zone];//[[RICCollectionViewItem allocWithZone:zone] init];
+    RICCollectionViewItem *newItem = [super copyWithZone:zone];
     [newItem setDelegate:[self delegate]];
+    [(RICSelectionItemView *)[newItem view] setCollectionItem:newItem];
     return newItem;
 }
 

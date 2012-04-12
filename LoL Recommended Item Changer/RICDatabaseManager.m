@@ -62,6 +62,8 @@ static int sqlite_callback(void *object, int argc, char **argv, char **azColName
 
 -(NSArray *)allChampions
 {
+    if(_champions)
+        return _champions;
     //  I am going to cheat a little bit. I know how many champions there are.
     //  I mean, capacity doesn't really matter, as it resizes automatically,
     //  but I figure since I CAN give it a good capacity at the start, I will.
@@ -70,11 +72,12 @@ static int sqlite_callback(void *object, int argc, char **argv, char **azColName
     //  there are 89 champions, but we will do 100 so the capacity is right for a decent amount
     //  of time
     NSMutableArray *ret = [[NSMutableArray alloc] initWithCapacity:100];
-    NSDictionary *results = [self executeQuery:@"SELECT * FROM Champions"];
+    NSDictionary *results = [self executeQuery:@"SELECT * FROM Champions ORDER BY name ASC"];
     for(NSInteger i = 0 ; i < [[results objectForKey:@"nameCode"] count] ; i++)
     {
         [ret addObject:[self championFromResultsDictionary:results atIndex:i]];
     }
+    _champions = ret;
     return ret;
 }
 
@@ -86,6 +89,8 @@ static int sqlite_callback(void *object, int argc, char **argv, char **azColName
 
 -(NSArray *)allItems
 {
+    if(_items)
+        return _items;
     //  Items are in a similar situation to champions (see above), so I will just
     //  make the capacity a bit larger than the current number of items
     //  (As a note, there are 115 items as of time of writing)
@@ -95,12 +100,13 @@ static int sqlite_callback(void *object, int argc, char **argv, char **azColName
     {
         [ret addObject:[self itemFromResultsDictionary:results atIndex:i]];
     }
+    _items = ret;
     return ret;
 }
 
 -(RICItem *)itemWithCode:(NSInteger)code
 {
-    NSString *query = [NSString stringWithFormat:@"SELECT * FROM Items WHERE code = %i",code];
+    NSString *query = [NSString stringWithFormat:@"SELECT * FROM Items WHERE code = %i ORDER BY name ASC",code];
     return [self itemFromResultsDictionary:[self executeQuery:query] atIndex:0];
 }
 

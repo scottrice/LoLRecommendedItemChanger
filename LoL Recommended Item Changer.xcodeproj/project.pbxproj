@@ -47,7 +47,6 @@
 		E67E805E1527CD5300D7A616 /* Augment-_Gravity.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD51527CD5300D7A616 /* Augment-_Gravity.gif */; };
 		E67E805F1527CD5300D7A616 /* Augment-_Power.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD61527CD5300D7A616 /* Augment-_Power.gif */; };
 		E67E80601527CD5300D7A616 /* Avarice_Blade.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD71527CD5300D7A616 /* Avarice_Blade.gif */; };
-		E67E80611527CD5300D7A616 /* B._F._Sword.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD81527CD5300D7A616 /* B._F._Sword.gif */; };
 		E67E80621527CD5300D7A616 /* Banshee's_Veil.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FD91527CD5300D7A616 /* Banshee's_Veil.gif */; };
 		E67E80631527CD5300D7A616 /* Berserker's_Greaves.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FDA1527CD5300D7A616 /* Berserker's_Greaves.gif */; };
 		E67E80641527CD5300D7A616 /* Bilgewater_Cutlass.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E7FDB1527CD5300D7A616 /* Bilgewater_Cutlass.gif */; };
@@ -176,7 +175,7 @@
 		E67E80DF1527CD5300D7A616 /* Zhonya's_Hourglass.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E80561527CD5300D7A616 /* Zhonya's_Hourglass.gif */; };
 		E67E80E01527CD5300D7A616 /* Zhonya's_Ring.gif in Resources */ = {isa = PBXBuildFile; fileRef = E67E80571527CD5300D7A616 /* Zhonya's_Ring.gif */; };
 		E691036E152683CD0052CD48 /* RICSelectedItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E691036D152683CD0052CD48 /* RICSelectedItemView.xib */; };
-		E6910372152684E80052CD48 /* RICSelectedItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910371152684E80052CD48 /* RICSelectedItemView.m */; };
+		E6910372152684E80052CD48 /* RICCurrentlySelectedItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6910371152684E80052CD48 /* RICCurrentlySelectedItemView.m */; };
 		E69B17DD14A43E3600273449 /* LoLData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E69B17DC14A43E3600273449 /* LoLData.sqlite */; };
 		E6AA624714A4647E00618F36 /* Ahri.png in Resources */ = {isa = PBXBuildFile; fileRef = E6AA61EE14A4647E00618F36 /* Ahri.png */; };
 		E6AA624814A4647E00618F36 /* Akali.png in Resources */ = {isa = PBXBuildFile; fileRef = E6AA61EF14A4647E00618F36 /* Akali.png */; };
@@ -271,6 +270,9 @@
 		E6AA62A514A4662500618F36 /* RICSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6AA62A314A4662500618F36 /* RICSelectionView.xib */; };
 		E6B70B8B14A50C5F004D93FC /* RICCollectionViewItem.h in Sources */ = {isa = PBXBuildFile; fileRef = E6B70B8914A50C5F004D93FC /* RICCollectionViewItem.h */; };
 		E6B70B8C14A50C5F004D93FC /* RICCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B70B8A14A50C5F004D93FC /* RICCollectionViewItem.m */; };
+		E6D5559E15337117002E1EF8 /* BlueGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D5559D15337117002E1EF8 /* BlueGradient.png */; };
+		E6D555A315337CDB002E1EF8 /* BF_Sword.gif in Resources */ = {isa = PBXBuildFile; fileRef = E6D555A215337CDB002E1EF8 /* BF_Sword.gif */; };
+		E6D555A61533D0E5002E1EF8 /* RICSelectionItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D555A51533D0E5002E1EF8 /* RICSelectionItemView.m */; };
 		E6D5F0B5146912BF005A41B0 /* RICRecommendedItemManager.h in Sources */ = {isa = PBXBuildFile; fileRef = E6D5F0B3146912BF005A41B0 /* RICRecommendedItemManager.h */; };
 		E6D5F0B6146912BF005A41B0 /* RICRecommendedItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D5F0B4146912BF005A41B0 /* RICRecommendedItemManager.m */; };
 /* End PBXBuildFile section */
@@ -336,7 +338,6 @@
 		E67E7FD51527CD5300D7A616 /* Augment-_Gravity.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Augment-_Gravity.gif"; sourceTree = "<group>"; };
 		E67E7FD61527CD5300D7A616 /* Augment-_Power.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Augment-_Power.gif"; sourceTree = "<group>"; };
 		E67E7FD71527CD5300D7A616 /* Avarice_Blade.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Avarice_Blade.gif; sourceTree = "<group>"; };
-		E67E7FD81527CD5300D7A616 /* B._F._Sword.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = B._F._Sword.gif; sourceTree = "<group>"; };
 		E67E7FD91527CD5300D7A616 /* Banshee's_Veil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Banshee's_Veil.gif"; sourceTree = "<group>"; };
 		E67E7FDA1527CD5300D7A616 /* Berserker's_Greaves.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Berserker's_Greaves.gif"; sourceTree = "<group>"; };
 		E67E7FDB1527CD5300D7A616 /* Bilgewater_Cutlass.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Bilgewater_Cutlass.gif; sourceTree = "<group>"; };
@@ -465,8 +466,8 @@
 		E67E80561527CD5300D7A616 /* Zhonya's_Hourglass.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Zhonya's_Hourglass.gif"; sourceTree = "<group>"; };
 		E67E80571527CD5300D7A616 /* Zhonya's_Ring.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Zhonya's_Ring.gif"; sourceTree = "<group>"; };
 		E691036D152683CD0052CD48 /* RICSelectedItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RICSelectedItemView.xib; sourceTree = "<group>"; };
-		E6910370152684E80052CD48 /* RICSelectedItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICSelectedItemView.h; sourceTree = "<group>"; };
-		E6910371152684E80052CD48 /* RICSelectedItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICSelectedItemView.m; sourceTree = "<group>"; };
+		E6910370152684E80052CD48 /* RICCurrentlySelectedItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = RICCurrentlySelectedItemView.h; sourceTree = "<group>"; };
+		E6910371152684E80052CD48 /* RICCurrentlySelectedItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICCurrentlySelectedItemView.m; sourceTree = "<group>"; };
 		E69B17DC14A43E3600273449 /* LoLData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = LoLData.sqlite; sourceTree = "<group>"; };
 		E6AA61EE14A4647E00618F36 /* Ahri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ahri.png; sourceTree = "<group>"; };
 		E6AA61EF14A4647E00618F36 /* Akali.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Akali.png; sourceTree = "<group>"; };
@@ -562,6 +563,10 @@
 		E6AA62A314A4662500618F36 /* RICSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RICSelectionView.xib; sourceTree = "<group>"; };
 		E6B70B8914A50C5F004D93FC /* RICCollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = RICCollectionViewItem.h; sourceTree = "<group>"; };
 		E6B70B8A14A50C5F004D93FC /* RICCollectionViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICCollectionViewItem.m; sourceTree = "<group>"; };
+		E6D5559D15337117002E1EF8 /* BlueGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueGradient.png; sourceTree = "<group>"; };
+		E6D555A215337CDB002E1EF8 /* BF_Sword.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BF_Sword.gif; sourceTree = "<group>"; };
+		E6D555A41533D0E5002E1EF8 /* RICSelectionItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RICSelectionItemView.h; sourceTree = "<group>"; };
+		E6D555A51533D0E5002E1EF8 /* RICSelectionItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICSelectionItemView.m; sourceTree = "<group>"; };
 		E6D5F0B3146912BF005A41B0 /* RICRecommendedItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj; path = RICRecommendedItemManager.h; sourceTree = "<group>"; };
 		E6D5F0B4146912BF005A41B0 /* RICRecommendedItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RICRecommendedItemManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -671,12 +676,14 @@
 		E65A3BCA149731590046B9ED /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E6910370152684E80052CD48 /* RICSelectedItemView.h */,
-				E6910371152684E80052CD48 /* RICSelectedItemView.m */,
+				E6910370152684E80052CD48 /* RICCurrentlySelectedItemView.h */,
+				E6910371152684E80052CD48 /* RICCurrentlySelectedItemView.m */,
 				E63091DF14664F7800DDB99D /* MainMenu.xib */,
 				E63F791214A25A4900FE1E4D /* RICCurrentSelectionView.xib */,
 				E691036D152683CD0052CD48 /* RICSelectedItemView.xib */,
 				E6AA62A314A4662500618F36 /* RICSelectionView.xib */,
+				E6D555A41533D0E5002E1EF8 /* RICSelectionItemView.h */,
+				E6D555A51533D0E5002E1EF8 /* RICSelectionItemView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -734,6 +741,7 @@
 		E67E7FCE1527CD5300D7A616 /* ItemIcons */ = {
 			isa = PBXGroup;
 			children = (
+				E6D555A215337CDB002E1EF8 /* BF_Sword.gif */,
 				E67E7FCF1527CD5300D7A616 /* Abyssal_Scepter.gif */,
 				E67E7FD01527CD5300D7A616 /* Aegis_of_the_Legion.gif */,
 				E67E7FD11527CD5300D7A616 /* Amplifying_Tome.gif */,
@@ -743,7 +751,6 @@
 				E67E7FD51527CD5300D7A616 /* Augment-_Gravity.gif */,
 				E67E7FD61527CD5300D7A616 /* Augment-_Power.gif */,
 				E67E7FD71527CD5300D7A616 /* Avarice_Blade.gif */,
-				E67E7FD81527CD5300D7A616 /* B._F._Sword.gif */,
 				E67E7FD91527CD5300D7A616 /* Banshee's_Veil.gif */,
 				E67E7FDA1527CD5300D7A616 /* Berserker's_Greaves.gif */,
 				E67E7FDB1527CD5300D7A616 /* Bilgewater_Cutlass.gif */,
@@ -878,6 +885,7 @@
 		E69B17DB14A43E3600273449 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E6D5559D15337117002E1EF8 /* BlueGradient.png */,
 				E67E7FCE1527CD5300D7A616 /* ItemIcons */,
 				E67E7FBF1527B15F00D7A616 /* UnknownItem.png */,
 				E6AA61ED14A4647E00618F36 /* ChampionIcons */,
@@ -1156,7 +1164,6 @@
 				E67E805E1527CD5300D7A616 /* Augment-_Gravity.gif in Resources */,
 				E67E805F1527CD5300D7A616 /* Augment-_Power.gif in Resources */,
 				E67E80601527CD5300D7A616 /* Avarice_Blade.gif in Resources */,
-				E67E80611527CD5300D7A616 /* B._F._Sword.gif in Resources */,
 				E67E80621527CD5300D7A616 /* Banshee's_Veil.gif in Resources */,
 				E67E80631527CD5300D7A616 /* Berserker's_Greaves.gif in Resources */,
 				E67E80641527CD5300D7A616 /* Bilgewater_Cutlass.gif in Resources */,
@@ -1284,6 +1291,8 @@
 				E67E80DE1527CD5300D7A616 /* Zeke's_Herald.gif in Resources */,
 				E67E80DF1527CD5300D7A616 /* Zhonya's_Hourglass.gif in Resources */,
 				E67E80E01527CD5300D7A616 /* Zhonya's_Ring.gif in Resources */,
+				E6D5559E15337117002E1EF8 /* BlueGradient.png in Resources */,
+				E6D555A315337CDB002E1EF8 /* BF_Sword.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,7 +1325,8 @@
 				E6AA62A414A4662500618F36 /* RICSelectionViewController.m in Sources */,
 				E6B70B8B14A50C5F004D93FC /* RICCollectionViewItem.h in Sources */,
 				E6B70B8C14A50C5F004D93FC /* RICCollectionViewItem.m in Sources */,
-				E6910372152684E80052CD48 /* RICSelectedItemView.m in Sources */,
+				E6910372152684E80052CD48 /* RICCurrentlySelectedItemView.m in Sources */,
+				E6D555A61533D0E5002E1EF8 /* RICSelectionItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1506,6 +1516,7 @@
 				E67A003D1527E5DB0014B0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
