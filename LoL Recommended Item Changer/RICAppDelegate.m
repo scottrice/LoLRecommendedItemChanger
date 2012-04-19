@@ -31,4 +31,20 @@
     [[_window contentView] addSubview:[_selection view]];
 }
 
+-(IBAction)deploy:(id)sender {
+    RICChampion *champion = [_currentSelection champion];
+    NSArray *items = [_currentSelection items];
+    NSLog(@"Setting items %@ for %@",items, champion);
+    NSLog(@"%@",[RICRecommendedItemManager LOLAppFilePath]);
+}
+
+-(IBAction)chooseAppFile:(id)sender {
+    NSOpenPanel *openPanel = [[NSOpenPanel openPanel] retain];
+    [openPanel setDirectoryURL:[NSURL fileURLWithPath:@"/Applications/" isDirectory:YES]];
+    [openPanel setAllowedFileTypes:[NSArray arrayWithObject:@"app"]];
+    [openPanel beginWithCompletionHandler:^(NSInteger result){
+        [RICRecommendedItemManager setLOLAppFilePath:[[[openPanel URLs] objectAtIndex:0] path]];
+    }];
+}
+
 @end

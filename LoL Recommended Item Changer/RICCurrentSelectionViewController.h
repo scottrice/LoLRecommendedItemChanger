@@ -11,6 +11,7 @@
 
 #import "RICItem.h"
 #import "RICChampion.h"
+#import "RICRecommendedItemManager.h"
 
 #import "RICCurrentlySelectedItemView.h"
 
@@ -34,12 +35,14 @@
     IBOutlet RICCurrentlySelectedItemView *_loadedCurrentItemView;
 }
 
-
+-(RICChampion *)champion;
+-(NSArray *)items;
 -(void)setChampion:(RICChampion *)champion;
 -(void)setNextItem:(RICItem *)item;
 -(void)setItem:(RICItem *)item atIndex:(NSUInteger)index;
 
 -(IBAction)championPortraitClicked:(id)sender;
+-(IBAction)importWindowsBuildCode:(id)sender;
 
 @property(nonatomic,retain)NSButton *championIconView;
 @property(nonatomic,retain)RICSelectionViewController *selectionViewController;

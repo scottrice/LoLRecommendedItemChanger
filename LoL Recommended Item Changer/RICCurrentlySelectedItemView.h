@@ -14,10 +14,11 @@
 @private
     IBOutlet NSImageView *_itemIconView;
     IBOutlet NSTextField *_itemNameLabel;
-    IBOutlet NSImageView *_selectedImageView;
+    NSImage *_selectedBackgroundImage;
     RICItem *_item;
     
     BOOL _isCurrentItem;
+    BOOL _isHovering;
     
     id _target;
     SEL _action;

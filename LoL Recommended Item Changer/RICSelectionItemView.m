@@ -30,7 +30,10 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    // Drawing code here.
+    NSRect backgroundRect = NSMakeRect(5,5,110,110);
+    NSColor *border = RICIMAGEVIEWBORDERCOLOR;
+    [border set];
+    NSRectFill(backgroundRect);
 }
 
 #pragma mark -

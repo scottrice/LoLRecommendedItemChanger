@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RICINIManager.h"
-#import "RICChampion.h"
+
+#import "RICConstants.h"
+
 #import "RICItem.h"
+#import "RICChampion.h"
+#import "RICINIManager.h"
 
 
 @interface RICRecommendedItemManager : NSObject {
@@ -18,6 +21,9 @@
     RICChampion *_champion;
     NSArray *_items;
 }
+
++(NSArray *)itemsFromWindowsBuildCode:(NSString *)buildCode;
++(NSString *)windowsBuildCodeFromItems:(NSArray *)items;
 
 //  Shortcut method to make handling this class extremely easy
 +(BOOL)setRecommendedItems:(NSArray *)items forChampion:(RICChampion *)character;

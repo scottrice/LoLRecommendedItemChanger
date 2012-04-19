@@ -8,6 +8,8 @@
 
 #import "RICRecommendedItemManager.h"
 
+#define LOLAPPFILEPATHDEFAULTSKEY @"LoLAppFilePath"
+
 @interface RICRecommendedItemManager (Private)
 
 - (NSString *)championDirectory;
@@ -23,26 +25,47 @@
 #pragma mark -
 #pragma mark Class Methods
 
++(NSString *)LOLAppFilePath
+{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:LOLAPPFILEPATHDEFAULTSKEY];
+}
+
++(void)setLOLAppFilePath:(NSString *)path
+{
+    NSString *storedPath = [[NSUserDefaults standardUserDefaults] stringForKey:LOLAPPFILEPATHDEFAULTSKEY];
+    if(storedPath != path)
+        [[NSUserDefaults standardUserDefaults] setObject:path forKey:LOLAPPFILEPATHDEFAULTSKEY];
+}
+
 +(BOOL)setRecommendedItems:(NSArray *)items forChampion:(RICChampion *)champion
 {
     RICRecommendedItemManager *manager = [[RICRecommendedItemManager alloc] initWithChampion:champion];
     return [manager setItems:items];
 }
 
-static NSString *_appPath = @"/Applications/League of Legends - Boompje Edition.app";
-
-+(NSString *)LOLAppFilePath
-{
-    return _appPath;
++(NSArray *)itemsFromWindowsBuildCode:(NSString *)buildCode {
+    //  Each item should be referenced by a 4 digit item id.
+    if([buildCode length] != (NUMBER_OF_ITEMS * LENGTH_OF_ITEM_CODE))
+        return nil;
+    NSMutableArray *ret = [NSMutableArray arrayWithCapacity:NUMBER_OF_ITEMS];
+    NSRange range = NSMakeRange(0, LENGTH_OF_ITEM_CODE);
+    for(NSUInteger i = 0 ; i < NUMBER_OF_ITEMS ; i++) {
+        range.location = i * LENGTH_OF_ITEM_CODE;
+        NSInteger itemCode = [[buildCode substringWithRange:range] intValue];
+        RICItem *item = [RICItem findItemWithCode:itemCode];
+        [ret addObject:item];
+    }
+    return ret;
 }
 
-+(void)setLOLAppFilePath:(NSString *)path
-{
-    if(_appPath != path)
-    {
-        [_appPath release];
-        _appPath = [path copy];
++(NSString *)windowsBuildCodeFromItems:(NSArray *)items {
+    if([items count] != NUMBER_OF_ITEMS)
+        return nil;
+    NSMutableString *buildCode = [[NSMutableString alloc] initWithCapacity:NUMBER_OF_ITEMS * LENGTH_OF_ITEM_CODE];
+    for(NSUInteger i = 0 ; i < NUMBER_OF_ITEMS ; i++) {
+        [buildCode appendString:[[items objectAtIndex:i] codeString]];
     }
+    return [NSString stringWithString:buildCode];
 }
 
 #pragma mark -
@@ -91,6 +114,7 @@ static NSString *_appPath = @"/Applications/League of Legends - Boompje Edition.
         _items = items;
         return YES;
     }
+    NSLog(@"%@",error);
     return NO;   
 }
 
@@ -109,10 +133,11 @@ static NSString *_appPath = @"/Applications/League of Legends - Boompje Edition.
 {
     if(!_championDirectory)
     {
+        //  TODO: Actually detect whether they are using iLoL or the old Boompje version
         BOOL iLoL = YES;
         if(!iLoL) {
             //  This data was good for old versions of Boompje LoL. iLoL uses a completely different setup
-            NSString *base = [_appPath stringByAppendingString:@"/Contents/Resources/transgaming/c_drive/rads/solutions/lol_game_client_sln/releases"];
+            NSString *base = [[RICRecommendedItemManager LOLAppFilePath] stringByAppendingString:@"/Contents/Resources/transgaming/c_drive/rads/solutions/lol_game_client_sln/releases"];
             //  Now that we have the base, we need to get the version number folder.
             //  According to the wiki, this folder name will change with updates, but
             //  there will still only be one folder. In that case, we will just get the
@@ -123,7 +148,7 @@ static NSString *_appPath = @"/Applications/League of Legends - Boompje Edition.
         }
         else {
             //  For iLoL, things are MUCH simpler
-            NSString *charactersDirectory = [_appPath stringByAppendingString:@"/Contents/Resources/League of Legends/files/DATA/Characters"];
+            NSString *charactersDirectory = [[RICRecommendedItemManager LOLAppFilePath] stringByAppendingString:@"/Contents/Resources/League of Legends/files/DATA/Characters"];
             _championDirectory = [charactersDirectory stringByAppendingPathComponent:[_champion nameCode]];
         }
     }

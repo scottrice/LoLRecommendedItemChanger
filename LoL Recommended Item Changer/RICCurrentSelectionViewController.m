@@ -46,7 +46,20 @@
     return self;
 }
 
+-(RICChampion *)champion {
+    return _champion;
+}
+
+-(NSArray *)items {
+    return _items;
+}
+
 -(void)setChampion:(RICChampion *)champion {
+    if(_champion != champion) {
+        [_champion release];
+        _champion = champion;
+        [_champion retain];
+    }
     [_championIconView setImage:[champion icon]];
     [_championLabel setStringValue:[champion name]];
 }
@@ -77,6 +90,13 @@
 
 -(IBAction)championPortraitClicked:(id)sender {
     [_selectionController showChampions];
+}
+
+-(IBAction)importWindowsBuildCode:(id)sender {
+    NSArray *items = [RICRecommendedItemManager itemsFromWindowsBuildCode:[sender stringValue]];
+    for(NSUInteger i = 0 ; i < [items count] ; i++) {
+        [self setItem:[items objectAtIndex:i] atIndex:i];
+    }
 }
 
 - (void)dealloc

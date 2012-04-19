@@ -78,11 +78,14 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="746100"/>
 								<reference key="NSDocView" ref="746100"/>
-								<object class="NSColor" key="NSBGColor" id="26904338">
+								<object class="NSColor" key="NSBGColor">
 									<int key="NSColorSpace">6</int>
 									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">controlColor</string>
-									<reference key="NSColor" ref="1047282204"/>
+									<string key="NSColorName">controlDarkShadowColor</string>
+									<object class="NSColor" key="NSColor">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MAA</bytes>
+									</object>
 								</object>
 								<int key="NScvFlags">4</int>
 							</object>
@@ -141,6 +144,12 @@
 										<int key="NSMaxNumberOfGridColumns">0</int>
 										<array key="NSBackgroundColors">
 											<reference ref="915230925"/>
+											<object class="NSColor">
+												<int key="NSColorSpace">6</int>
+												<string key="NSCatalogName">System</string>
+												<string key="NSColorName">controlAlternatingRowColor</string>
+												<reference key="NSColor" ref="1047282204"/>
+											</object>
 										</array>
 										<int key="NSDraggingSourceMaskForLocal">-1</int>
 										<int key="NSDraggingSourceMaskForNonLocal">0</int>
@@ -151,7 +160,12 @@
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="771598049"/>
 								<reference key="NSDocView" ref="771598049"/>
-								<reference key="NSBGColor" ref="26904338"/>
+								<object class="NSColor" key="NSBGColor">
+									<int key="NSColorSpace">6</int>
+									<string key="NSCatalogName">System</string>
+									<string key="NSColorName">controlColor</string>
+									<reference key="NSColor" ref="1047282204"/>
+								</object>
 								<int key="NScvFlags">4</int>
 							</object>
 							<object class="NSScroller" id="71878618">
@@ -211,7 +225,7 @@
 							<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
 							<string>NeXT TIFF v4.0 pasteboard type</string>
 						</set>
-						<string key="NSFrameSize">{100, 100}</string>
+						<string key="NSFrame">{{10, 10}, {100, 100}}</string>
 						<reference key="NSSuperview" ref="626762901"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -225,13 +239,13 @@
 							</object>
 							<int key="NSAlign">0</int>
 							<int key="NSScale">3</int>
-							<int key="NSStyle">1</int>
+							<int key="NSStyle">0</int>
 							<bool key="NSAnimates">NO</bool>
 						</object>
 						<bool key="NSEditable">YES</bool>
 					</object>
 				</array>
-				<string key="NSFrameSize">{100, 100}</string>
+				<string key="NSFrameSize">{120, 120}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="964927030"/>
@@ -451,6 +465,7 @@
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="28.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<reference key="29.IBCollectionViewIntegration.primaryColor" ref="915230925"/>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="30.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="31.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>

@@ -11,6 +11,7 @@
 
 @interface RICRecommendedItemManagerTest : GHTestCase { 
     NSArray *_spamToppyItems;
+    NSString *_spamToppyBuildCode;
 }
 @end
 
@@ -23,6 +24,8 @@
 }
 
 - (void)setUpClass {
+    //  Set the app file path
+    [RICRecommendedItemManager setLOLAppFilePath:@"/Applications/iLoL Open Beta.app"];
     //  These items are from SpamHappy's Poppy guide :P
     _spamToppyItems = [NSArray arrayWithObjects:[RICItem findItemWithCode:3078],
                                                 [RICItem findItemWithCode:3110],
@@ -30,6 +33,7 @@
                                                 [RICItem findItemWithCode:3140],
                                                 [RICItem findItemWithCode:3031],
                                                 [RICItem findItemWithCode:3069], nil];
+    _spamToppyBuildCode = @"307831103146314030313069";
 }
 
 - (void)tearDownClass {
@@ -83,6 +87,14 @@
     [kayleManager clearRecommendedItems];
     GHAssertNil([kayleManager items],@"Should return nil when there are no recommended items");
     GHAssertFalse([kayleManager isUsingCustomItems], @"After clearing, it should say I'm not using custom items");
+}
+
+-(void)testItemsFromWindowsBuildCode {
+    GHAssertEqualObjects(_spamToppyItems, [RICRecommendedItemManager itemsFromWindowsBuildCode:_spamToppyBuildCode], @"The items output was not the one from the build code");
+}
+
+-(void)testWindowsBuildCodeFromItems {
+    GHAssertEqualStrings(_spamToppyBuildCode, [RICRecommendedItemManager windowsBuildCodeFromItems:_spamToppyItems], @"The build code output was not the one done by hand");
 }
 
 @end

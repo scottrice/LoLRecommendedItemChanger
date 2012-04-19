@@ -78,7 +78,6 @@
     [_itemCollection setSelectable:YES];
     [_itemCollection setContent:[[RICDatabaseManager defaultManager] allItems]];
     [_itemCollection setDelegate:self];
-    [self selectChampion:[RICChampion findChampionWithNameCode:@"Ashe"]];
 }
 
 -(void)loadView

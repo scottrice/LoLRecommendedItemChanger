@@ -20,6 +20,9 @@
     RICCurrentSelectionViewController *_currentSelection;
 }
 
+-(IBAction)chooseAppFile:(id)sender;
+-(IBAction)deploy:(id)sender;
+
 @property (assign) NSWindow *window;
 
 @end

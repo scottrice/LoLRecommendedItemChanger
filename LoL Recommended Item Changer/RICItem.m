@@ -57,6 +57,10 @@
 #pragma mark -
 #pragma mark Private
 
+-(NSString *)description {
+    return [self name];
+}
+
 - (void)dealloc
 {
     [super dealloc];

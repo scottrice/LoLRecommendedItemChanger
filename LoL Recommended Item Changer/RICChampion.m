@@ -42,11 +42,18 @@
 }
 
 -(BOOL)isEqual:(id)object {
-    
+    RICChampion *other = (RICChampion *)object;
+    return  [[self name] isEqual:[other name]] &&
+            [[self nameCode] isEqual:[other nameCode]] &&
+            [[self championDescription] isEqual:[other championDescription]];
 }
 
 #pragma mark -
 #pragma mark Private
+
+-(NSString *)description {
+    return [self name];
+}
 
 - (void)dealloc
 {

@@ -24,6 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self registerForDraggedTypes:[NSArray arrayWithObject:RICITEMDRAGTYPE]];
+        _selectedBackgroundImage = [NSImage imageNamed:@"BlueGradient"];
     }
     
     return self;
@@ -65,16 +66,52 @@
 
 -(void)setIsCurrentItem:(BOOL)isCurrentItem {
     _isCurrentItem = isCurrentItem;
-    [_selectedImageView setHidden:!_isCurrentItem];
     _isCurrentItem ? [_itemNameLabel setTextColor:[NSColor whiteColor]] : [_itemNameLabel setTextColor:[NSColor blackColor]];
+    [self setNeedsDisplay:YES];
+}
+
+-(void)drawRect:(NSRect)dirtyRect {
+    if(_isHovering && !_isCurrentItem) {
+        [_selectedBackgroundImage   drawInRect: [self bounds]
+                                      fromRect: NSZeroRect
+                                     operation: NSCompositeSourceOver
+                                      fraction: 0.3];
+    }
+    if(_isCurrentItem) {
+        [_selectedBackgroundImage   drawInRect: [self bounds]
+                                    fromRect: NSZeroRect
+                                    operation: NSCompositeSourceOver
+                                    fraction: 1.0];
+    }
+    NSRect borderRect = NSInsetRect([_itemIconView frame], -5, -5);
+    NSColor *borderColor = RICIMAGEVIEWBORDERCOLOR;
+    [borderColor set];
+    NSRectFill(borderRect);
 }
 
 #pragma mark -
-#pragma mark Mouse Events (for selecting as current item)
+#pragma mark Mouse Events (for selecting as current item and hoverability)
+
+- (void) viewDidMoveToWindow {
+    [self addTrackingRect:[self bounds]
+                    owner:self
+                 userData:nil
+             assumeInside:NO];
+}
 
 -(void)mouseDown:(NSEvent *)theEvent {
     //  Call action on target passing in this object as a parameter
     [_target performSelector:_action withObject:self];
+}
+
+-(void)mouseEntered:(NSEvent *)theEvent {
+    _isHovering = YES;
+    [self setNeedsDisplay:YES];
+}
+
+-(void)mouseExited:(NSEvent *)theEvent {
+    _isHovering = NO;
+    [self setNeedsDisplay:YES];
 }
 
 #pragma mark -
